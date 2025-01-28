@@ -1,7 +1,7 @@
 // Function	to fetch the current total compliments count
 async function getComplimentCount()	{
 	try	{
-	const response = await fetch('http://localhost:3000/api/compliments/count');
+	const response = await fetch('https://compliment-gen-website-1.onrender.com/api/compliments/count');
 	if (!response.ok)	{
 		throw new Error(`Failed	to fetch count:	${response.status}`);
 	}
@@ -15,7 +15,7 @@ async function getComplimentCount()	{
   // Function to increment the compliment count	on the server
 async function incrementComplimentCount()	{
 	try	{
-	const response = await fetch('http://localhost:3000/api/compliments/increment', {
+	const response = await fetch('https://compliment-gen-website-1.onrender.com/api/compliments/increment', {
 		method:	'POST',
 		headers: { 'Content-Type': 'application/json' }
 	});
